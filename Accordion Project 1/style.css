@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --white: var(#fff);
+  --primary-color: rebeccapurple;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 2rem;
+}
+.images {
+  position: relative;
+  width: 30rem;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.images::after {
+  position: absolute;
+  content: "FEITO COM:";
+  background-color: rgba(243, 78, 255, 0.535);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.2rem;
+  left: -10px;
+  top: -10px;
+  transform: rotate(-30deg);
+}
+
+.images img {
+  width: 8rem;
+}
+
+#conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 30rem;
+  height: auto;
+}
+.accordion {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.41);
+}
+.accordion button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-body {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: rgb(107, 107, 107);
+  opacity: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.accordion-body.active {
+  opacity: 1;
+  height: 100%;
+}
+.accordion button span {
+  font-size: 1rem;
+}
